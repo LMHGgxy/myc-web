@@ -1,0 +1,103 @@
+<div class="home">
+  <div class="icon-animate">
+    <img loading="lazy" alt="arq-icon" src="/assets/constructor.png" />
+  </div>
+  <div class="info-text">
+    <h1>¿A qué nos dedicamos?</h1>
+    <p>
+      <b>SERVICIOS GENERALES M&C</b> se dedica a ofrecer soluciones integrales de
+      servicios para hogares y empresas. Ofrecemos una amplia variedad de servicios,
+      desde limpieza hasta jardinería, fontanería, electricidad, pintura y más. Nuestro
+      equipo altamente capacitado brinda un servicio personalizado, puntual y eficiente.
+    </p>
+  </div>
+</div>
+<style>
+  .home {
+    height: 89vh;
+    width: 100%;
+    margin-top: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .icon-animate {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+  img {
+    width: 50%;
+    animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    filter: drop-shadow(5px 5px 10px rgb(54, 54, 54));
+  }
+  .info-text {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    box-sizing: border-box;
+    animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @media (max-width: 992px) {
+    .home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12vh;
+      height: auto;
+    }
+    .info-text {
+      width: 100%;
+      height: 50vh;
+      animation: none;
+      font-size: medium;
+      padding: 0.5rem;
+      margin: 0;
+    }
+    .icon-animate {
+      width: 100%;
+      height: 30vh;
+    }
+    p,
+    h1 {
+      margin: 2px;
+    }
+    img {
+      width: 45%;
+      filter: none;
+      animation: none;
+    }
+  }
+</style>

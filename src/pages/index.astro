@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HomePage from "../components/Home.astro";
+import NavB from "../components/navB.astro";
+import Services from "../components/services.astro";
+import Contact from "../components/contact.astro"
+---
+
+<Layout title="myc">
+  <main>
+    <NavB />
+    <HomePage />
+	<Services/>
+	<Contact />
+  </main>
+</Layout>
+
+<style>
+  body {
+    margin: 0;
+  }
+  main {
+    margin: 0;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

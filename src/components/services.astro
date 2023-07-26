@@ -1,0 +1,57 @@
+---
+import Card from "../components/Card.astro";
+import { ScrollReveal} from 'scrollreveal'
+---
+
+<div id="servicios" class="services">
+  <ul role="list">
+    <Card image_background="/assets/services-pics/utiles-limpieza.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Venta%20de%20%C3%BAtiles%20de%20limpieza*" title="Venta de útiles de limpieza"  />
+    <Card image_background="/assets/services-pics/utiles-escritorio.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Venta%20de%20%C3%9Atiles%20de%20Escritorio*" title="Venta de Útiles de Escritorio"  />
+    <Card image_background="/assets/services-pics/ferreteria-general.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Venta%20de%20ferreter%C3%ADa%20en%20General*" title="Venta de ferretería en General"  />
+    <Card image_background="/assets/services-pics/venta-uniformes.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Venta%20de%20Uniformes%20(Empresas%20y%20colegios)*" title="Venta de Uniformes (Empresas y colegios)"  />
+    <Card image_background="/assets/services-pics/venta-epp.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Venta%20de%20EPP*" title="Venta de EPP"  />
+    <Card image_background="/assets/services-pics/servicio-electricidad.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Servicio%20en%20Electricidad*" title="Servicio en Electricidad"  />
+    <Card image_background="/assets/services-pics/redes-videovigilancia.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Servicio%20de%20Redes%20(Videovigilancia)*" title="Servicio de Redes (Videovigilancia)"  />
+    <Card image_background="/assets/services-pics/imprenta.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Servicio%20de%20Imprenta%20y%20Publicidad*" title="Servicio de Imprenta y Publicidad"  />
+    <Card image_background="/assets/services-pics/software-general.png" href="https://api.whatsapp.com/send?phone=51912122836&text=Buen%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20acerca%20de%20*Servicio%20de%20Software%20en%20general*" title="Software en general"  />
+  </ul>
+</div>
+<style>
+  .services {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 89vh;
+    display: grid;
+    place-items: center;
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 992px){
+    .services{
+      scroll-margin: 11vh;
+    }
+    ul{
+      
+      margin-top: 11vh;
+      height: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+</style>

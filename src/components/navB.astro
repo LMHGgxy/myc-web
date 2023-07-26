@@ -1,0 +1,148 @@
+<nav class="navbar">
+  <a href="#">
+    <img class="logo" loading="lazy" alt="logo" src="/assets/logo.png" />
+  </a>
+  <ul class="links">
+    <li>
+      <a class="smooth-scroll" href="#">INICIO</a>
+    </li>
+    <li>
+      <a class="smooth-scroll" href="#servicios">SERVICIOS</a>
+    </li>
+    <li>
+      <a class="smooth-scroll" id="contacts-link">CONTACTAR</a>
+    </li>
+  </ul>
+  <i class="fa fa-bars"></i>
+</nav>
+<style>
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #f0e6f3;
+    z-index: 100;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.363);
+  }
+  ul {
+    margin: 0;
+    width: 40%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  li {
+    width: 20%;
+    height: 10vh;
+    display: grid;
+    place-items: center;
+  }
+  .smooth-scroll {
+    text-decoration: none;
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: black;
+    transition: 0.5s;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  .smooth-scroll:hover {
+    color: white;
+    background-color: rgb(46, 46, 46);
+  }
+  #contacts-link {
+    background-color: rgb(255, 230, 0);
+    color: black;
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    cursor: pointer;
+  }
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .fa-bars {
+    display: none;
+  }
+  @media (max-width: 992px) {
+    .fa-bars {
+      display: block;
+      font-size: 200%;
+      width: 100px;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding-left: 2rem;
+      box-sizing: border-box;
+    }
+    nav {
+      padding: 0;
+    }
+    .logo {
+      width: 80%;
+    }
+    ul {
+      display: none;
+    }
+    .links.phone {
+      position: fixed;
+      margin: 0;
+      padding: 0;
+      background-color: #f0e6f3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 100vh;
+      width: 100%;
+      height: 89vh;
+    }
+    li {
+      width: 100%;
+      height: 20%;
+    }
+    .smooth-scroll:hover {
+      background-color: #f0e6f3;
+      color: black;
+    }
+    #contacts-link {
+      border-radius: 0;
+      animation: none;
+    }
+  }
+</style>
+<script>
+  const open_button = document.querySelector(".fa-bars");
+  const menu = document.querySelector(".links");
+  open_button.addEventListener("click", () => {
+    if (menu.classList.contains("phone")) {
+      menu.classList.remove("phone");
+    } else {
+      menu.classList.add("phone");
+    }
+  });
+  const link = document.querySelectorAll(".smooth-scroll");
+  link.forEach((e) => {
+    e.addEventListener("click", () => {
+      menu.classList.remove("phone");
+    });
+  });
+</script>

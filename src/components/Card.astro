@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  image_background:string;
+}
+
+const { href, title,image_background } = Astro.props;
+---
+<script>
+</script>
+<li class="link-card" style={`background-image: url(${image_background})`}>
+  <a href={href}>
+    <h2>
+      {title}
+      <span>&rarr;</span>
+    </h2>
+  </a>
+</li>
+
+<style>
+  .link-card {
+    width: 30%;
+    height: 20%;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    transition: 0.3s ease all;
+    overflow: hidden;
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:2rem;
+    background-color: rgba(0, 0, 0, 0.63);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: large;
+  }
+  h2 {
+    margin: 0;
+  }
+  li:hover {
+    transform: scale(1.07) translateY(-8%);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+  @media (max-width: 992px) {
+    .link-card {
+      padding: 0;
+      margin: 0;
+      width: 90%;
+      height: 40vh;
+      margin: 20px;
+    }
+    li:hover{
+      transform:none;
+      box-shadow: none;
+    }
+  }
+</style>
